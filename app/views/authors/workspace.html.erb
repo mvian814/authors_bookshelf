@@ -17,7 +17,13 @@
 
 <% authors.each do |author| %>
   <% image.each do |i| %>
-      <%= image_tag "stock-profile-i", alt: 'profile image', height: '100px'%>
+
+  <!-- <% image.each do |i| %>
+      <%= image_tag "stock-profile-#{i}", alt: 'profile image', height: '100px'%>
+      <% end %> -->
+
+
+      <%= image_tag "stock-profile-#{i}", alt: 'profile image', height: '100px'%>
       <% end %>
   <p>Name: <%= author.name %></p>
   <p>Bio: <%= author.bio %></p>

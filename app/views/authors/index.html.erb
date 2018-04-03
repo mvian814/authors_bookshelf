@@ -29,11 +29,16 @@
 
 <h1>The Author's Bookshelf</h1>
 
+<% @authors.each do |author| %>
 
   <div class="row">
       <div class="col big-box">
+        <h3>Author Information</h3>
 
-        author stuff
+          <h6><%= author.name %></h6>
+          <p>Bio: <%= author.bio %></p>
+          <p>Genre: <%= author.genre %> </p>
+          <p>Preferred Publisher: <%= author.publisher %> </p>
 
       </div>
 
@@ -42,8 +47,7 @@
       <div class="col">
               <div class="row">
                 <div class="col mini-box">
-
-                    book stuff
+                  <h3>Book Information</h3>
 
                   </div>
 
@@ -54,6 +58,7 @@
 
 
 
+    <% end %>
 
     </div>
 </div>

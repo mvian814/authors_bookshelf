@@ -1,0 +1,26 @@
+<!-- <% human.dogs.each do |dog| %>
+            <%= image_tag "dog.png", alt: "Default Dog Image", height: '50px' %>
+            <p>Name: <%= dog.name %></p>
+            <p>Breed: <%= dog.breed %></p>
+            <p>Weight: <%= dog.weight %> lbs </p>
+            <p>Age: <%= dog.age %> years old</p>
+            <% end %> -->
+
+            first_name: Faker::Name.first_name,
+            last_name: Faker::Name.last_name,
+            bio: Faker::Lorem.paragraph(4),
+            genre: Faker::Book.genre,
+            publisher: Faker::Book.publisher,
+            )
+
+
+
+<% authors.each do |author| %>
+  <% image.each do |i| %>
+      <%= image_tag "stock-profile-i", alt: 'profile image', height: '100px'%>
+      <% end %>
+  <p>Name: <%= author.name %></p>
+  <p>Bio: <%= author.bio %></p>
+  <p>Genre: <%= author.genre %> </p>
+  <p>Preferred Publisher: <%= author.publisher %> </p>
+<% end %>

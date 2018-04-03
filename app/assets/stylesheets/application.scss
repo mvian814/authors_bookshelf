@@ -13,3 +13,27 @@
  *= require_tree .
  *= require_self
  */
+
+ @import "bootstrap";
+
+ body {
+    background-color: #ad0c42;
+    margin: 0;
+    padding: 0px;
+    background-image: url("argyle.png");
+    font-family: 'Chicle', cursive;
+  }
+
+  h1 {
+    font-family: 'Chicle', cursive;
+    text-align: center;
+    font-size: 80px;
+  }
+
+  p {
+    font-family: 'Raleway', sans-serif;
+  }
+
+  .nav-link {
+    font-size: 30px;
+  }

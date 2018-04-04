@@ -12,17 +12,37 @@
 # t.string "genre"
 # t.string "publisher"
 
-
-
-  5.times do |author|
-    a =  Author.create!(
-      first_name: Faker::Name.first_name,
-      last_name: Faker::Name.last_name,
-      bio: Faker::Lorem.paragraph(4),
-      genre: Faker::Book.genre,
-      publisher: Faker::Book.publisher,
-    )
+# t.string "title"
+# t.string "isbn"
+# t.text "summary"
+# t.integer "author_id"
 
 
 
-    end
+def create_books(a)
+  5.times do |i|
+  a.books.create!(
+  title: Faker::Book.title,
+  isbn: Faker::Code.isbn,
+  summary: Faker::Lorem.sentence(1),
+)
+  end
+end
+
+Author.destroy_all
+Book.destroy_all
+
+
+5.times do |author|
+a =  Author.create!(
+  first_name: Faker::Name.first_name,
+  last_name: Faker::Name.last_name,
+  bio: Faker::Lorem.paragraph(4),
+  genre: Faker::Book.genre,
+  publisher: Faker::Book.publisher,
+)
+
+    # a.avatar = Rails.root.join("app/assets/images/stock-profile-#{author + 1}.jpeg").open
+
+    create_books(a)
+end

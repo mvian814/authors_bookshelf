@@ -13,7 +13,7 @@
             publisher: Faker::Book.publisher,
             )
 
-
+rails generate model Book title:string isbn:string summary:text author_id:integer
 
 <% authors.each do |author| %>
   <% image.each do |i| %>
@@ -30,3 +30,174 @@
   <p>Genre: <%= author.genre %> </p>
   <p>Preferred Publisher: <%= author.publisher %> </p>
 <% end %>
+
+
+
+
+
+
+
+
+<li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Add
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Author</a>
+        <a class="dropdown-item" href="#">Book</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<%= image_tag @author.profile_pic.url, height: '100px' %>
+
+a.profile_pic = Rails.root.join("app/assets/images/stock-profile-#{author + 1}.jpeg").open
+
+a.profile_pic = Rails.root.join("app/assets/images/stock-profile-#{author + 1}.jpeg").open
+
+rails g migration AddDirectorToMovie director:string
+
+rails g migration AddProfile_picToAuthor profile_pic:string
+
+
+
+
+mount_uploader :avatar, AvatarUploader
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="book_01.jpeg"  width="1100" height="500">
+      <div class="carousel-caption">
+        <h3>Book 1</h3>
+        <p>One line about the plot</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="book_02.jpeg"  width="1100" height="500">
+      <div class="carousel-caption">
+        <h3>Book 2</h3>
+        <p>Here's what its about</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="book_03.jpeg"  width="1100" height="500">
+      <div class="carousel-caption">
+        <h3>Book 3</h3>
+        <p>main ideas here</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="book_04.jpeg"  width="1100" height="500">
+      <div class="carousel-caption">
+        <h3>Book 4</h3>
+        <p>summary please and thank you</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="book_05.jpeg"  width="1100" height="500">
+      <div class="carousel-caption">
+        <h3>Book 5</h3>
+        <p>this is what is about</p>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+
+
+<!-- <div id="demo" class="carousel slide" data-ride="carousel">
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <%= image_tag "book_01.jpeg", width:1100, height:800 %>
+
+      <div class="carousel-caption">
+        <h3>Book 1</h3>
+        <p>One line about the plot</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag "book_02.jpeg", width:1100, height:800 %>
+      <div class="carousel-caption">
+        <h3>Book 2</h3>
+        <p>Here's what its about</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag "book_03.jpeg", width:1100, height:800 %>
+      <div class="carousel-caption">
+        <h3>Book 3</h3>
+        <p>main ideas here</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag "book_04.jpeg", width:1100, height:800 %>
+      <div class="carousel-caption">
+        <h3>Book 4</h3>
+        <p>summary please and thank you</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag "book_05.jpeg", width:1100, height:800 %>
+      <div class="carousel-caption">
+        <h3>Book 5</h3>
+        <p>this is what is about</p>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div> -->
+
+
+
+<% human.dogs.each do |dog| %>
+            <%= image_tag "dog.png", alt: "Default Dog Image", height: '50px' %>
+            <p>Name: <%= dog.name %></p>
+            <p>Breed: <%= dog.breed %></p>
+            <p>Weight: <%= dog.weight %> lbs </p>
+            <p>Age: <%= dog.age %> years old</p>
+            <% end %>
+
+
+
+<% author.books.each do |book| %>
+ <p>Title:  <%= book.title %></p>
+ <p>isbn:  <%= book.isbn %></p>
+ <p>Summary:  <%= book.summary %></p>

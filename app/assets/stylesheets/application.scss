@@ -17,13 +17,12 @@
  @import "bootstrap";
 
  body {
-    // background-color: #ad0c42;
-    background-image: url("argyle.png");
-
-    background-color: #99004d;
-    margin: 0;
-    padding: 0px;
-    font-family: 'Chicle';
+  // background-color: #ad0c42;
+  background-image: url("argyle.png");
+  background-color: #99004d;
+  margin: 0;
+  padding: 0px;
+  font-family: 'Chicle';
   }
 
 h1 {
@@ -53,10 +52,10 @@ p {
     margin-bottom: 15px;
 }
 
-  .nav-link {
-    font-family: 'Raleway', sans-serif;
-    font-size: 30px;
-  }
+.nav-link {
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+}
 
 
 .big-box,
@@ -87,13 +86,24 @@ p {
 
 
 .big-box {
-    background-color: #eeffcc;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    height: 600px;
-  }
+  background-color: #eeffcc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  height: 600px;
+}
 
 .mini_box {
   height: 600px;
   background-color: #eeffcc;
+}
+
+
+
+.wrapper {
+  // align-content: center;
+  text-align: center;
+  margin: auto;
+  background-color: #eeffcc;
+  width: 500px;
+  border-radius: 5px;
 }

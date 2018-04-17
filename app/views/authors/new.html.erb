@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  </body>
+</html>
+<h1>Add an Author</h1>
+
+<div class="wrapper">
+
+
+
+<%= form_for @author do |form| %>
+<br>
+  <%= form.label :first_name %>
+  <%= form.text_field :first_name%>
+<br>
+  <%= form.label :last_name %>
+  <%= form.text_field :last_name %>
+<br>
+  <%= form.label :bio %>
+  <%= form.text_field :bio %>
+<br>
+  <%= form.label :genre %>
+  <%= form.select :genre, @genre %>
+<br>
+  <%= form.label :publisher %>
+<%= form.text_field :publisher %>
+<br>
+<%= form.submit "Add an Author", class: 'btn' %>
+
+<% end %>
+</div>

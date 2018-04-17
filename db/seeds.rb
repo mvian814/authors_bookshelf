@@ -42,7 +42,9 @@ a =  Author.create!(
   publisher: Faker::Book.publisher,
 )
 
-    # a.avatar = Rails.root.join("app/assets/images/stock-profile-#{author + 1}.jpeg").open
+    a.avatar = Rails.root.join("app/assets/images/stock-profile-#{author + 1}.jpeg")
+    puts Rails.root.join("app/assets/images/stock-profile-#{author + 1}.jpeg")
+    # .open
 
     create_books(a)
 end
